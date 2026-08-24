@@ -1,0 +1,4 @@
+tracepoint:syscalls:sys_enter_execve
+{
+  printf("execve: %s\\n", str(args->filename));
+}
