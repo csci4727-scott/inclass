@@ -1,6 +1,6 @@
 .PHONY: help demo-vm-faults demo-uservm demo-blocked-reader demo-locking demo-scheduling demo-filesystem demo-crash-recovery
 
-XV6 := xv6-lecture
+XV6 := xv6
 
 help:
 	@printf '%s\n' 'Targets: demo-vm-faults demo-uservm demo-blocked-reader demo-locking demo-scheduling demo-filesystem demo-crash-recovery'

@@ -1,8 +1,4 @@
-[submodule "xv6-labs"]
-	path = xv6-labs
-	url = https://github.com/csci4727-scott/xv6-labs.git
-	branch = util
-[submodule "xv6-lecture"]
-	path = xv6-lecture
+[submodule "xv6"]
+	path = xv6
 	url = https://github.com/csci4727-scott/xv6-lecture.git
 	branch = l-threads-switch-demo
