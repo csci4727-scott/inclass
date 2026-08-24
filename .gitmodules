@@ -1,8 +1,8 @@
 [submodule "xv6-labs"]
 	path = xv6-labs
-	url = ssh://git@git.olympus:2222/csci-4727/xv6-labs.git
+	url = https://github.com/csci4727-scott/xv6-labs.git
 	branch = util
 [submodule "xv6-lecture"]
 	path = xv6-lecture
-	url = ssh://git@git.olympus:2222/csci-4727/xv6-lecture.git
+	url = https://github.com/csci4727-scott/xv6-lecture.git
 	branch = l-threads-switch-demo
