@@ -14,5 +14,12 @@ command -v riscv64-unknown-elf-gdb >/dev/null || { echo "riscv64-unknown-elf-gdb
 echo "==> Demo: $name"
 echo "==> GDB commands: $gdb_file"
 echo "==> Open the corresponding xv6 kernel source before continuing."
-echo "==> Running: make -C xv6-lecture qemu-gdb"
-exec make -C xv6-lecture qemu-gdb GDBCMD="$(pwd)/$gdb_file"
+port=$(make -s -C xv6-lecture print-gdbport)
+echo "==> Running: make -C xv6-lecture qemu-gdb (GDB port $port)"
+make -C xv6-lecture qemu-gdb &
+qemu_pid=$!
+cleanup() { kill "$qemu_pid" 2>/dev/null || true; }
+trap cleanup EXIT INT TERM
+sleep 1
+exec riscv64-unknown-elf-gdb -q -x "$gdb_file" xv6-lecture/kernel/kernel \
+  -ex "target remote :$port"
