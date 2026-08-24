@@ -1,6 +1,6 @@
 # CSCI 4727 In-Class Demonstrations
 
-This repository contains the instructor-facing, repeatable demonstrations for CSCI 4727. The xv6 trees are pinned submodules so a demo can be reproduced from a known source state.
+This repository contains the repeatable demonstrations for CSCI 4727. The xv6 trees are pinned submodules so a demo can be reproduced from a known source state.
 
 Run `make help` for the available demonstrations. Each target prints the command it is about to run and points to the source and GDB command file that explain the demonstration.
 
